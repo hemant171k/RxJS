@@ -1,0 +1,50 @@
+<div class="my-3">
+  <h2>Replay Subject</h2>
+  <br />
+  <div class="row">
+    <div class="col">
+      <h3>Add Video</h3>
+    </div>
+  </div>
+  <hr>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input type="text" class="form-control" #input>
+    </div>
+    <div class="col-md-3">
+      <button class="btn-success btn">Add Video</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>User-01</strong>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let list of userList1">
+          <strong>Video:</strong> {{list}}
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="col-md-4">
+      <strong>User-02</strong>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let list of userList2">
+          <strong>Video:</strong> {{list}}
+        </li>
+      </ul>
+    </div> -->
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Your channel Subscriber</div>
+        <div class="card-body">
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

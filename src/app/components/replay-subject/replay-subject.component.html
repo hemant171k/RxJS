@@ -1,0 +1,55 @@
+<div class="my-3">
+  <h2>Replay Subject</h2>
+  <br />
+  <div class="row">
+    <div class="col">
+      <h3>{{showAddButton?'Add Video':'Interval Started'}}</h3>
+    </div>
+    <div class="col text-right">
+      <button class="btn btn-warning" (click)="toggleButton()">Toggle Button</button>
+    </div>
+  </div>
+  <hr>
+  <div *ngIf="showAddButton" class="row justify-content-center">
+    <div class="col-md-4">
+      <input type="text" class="form-control" #input>
+    </div>
+    <div class="col-md-3">
+      <button class="btn-success btn" (click)="onVideoAdd(input)">Add Video</button>
+    </div>
+  </div>
+  <hr *ngIf="showAddButton">
+  <div class="row">
+    <div class="col-md-4">
+      <strong>User-01</strong>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let list of userList1">
+          <strong>Video:</strong> {{list}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <strong>User-02</strong>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let list of userList2">
+          <strong>Video:</strong> {{list}}
+        </li>
+      </ul>
+      <button class="btn" [ngClass]="(subscribeMode2)?'btn-success':'btn-danger'"
+        (click)="changeSubscribe2Mode()">{{(subscribeMode2)?'Subscribe':'Unsubscribe'}}</button>
+    </div>
+    <div class="col-md-4">
+      <strong>User-03</strong>
+      <hr>
+      <ul class="video-list">
+        <li *ngFor="let list of userList3">
+          <strong>Video:</strong> {{list}}
+        </li>
+      </ul>
+      <button class="btn" [ngClass]="(subscribeMode2)?'btn-success':'btn-danger'"
+        (click)="changeSubscribe2Mode()">{{(subscribeMode2)?'Subscribe':'Unsubscribe'}}</button>
+    </div>
+  </div>
+</div>
