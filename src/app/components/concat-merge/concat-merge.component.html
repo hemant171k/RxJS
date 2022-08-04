@@ -7,41 +7,108 @@
     </div>
   </div>
   <hr>
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <input type="text" class="form-control" #input>
-    </div>
-    <div class="col-md-3">
-      <button class="btn-success btn">Add Video</button>
-    </div>
+  <div class="row">
+    <div class="col-md-4"> Source - 01 | Tech Channel(5) </div>
+    <div class="col-md-4"> Source - 02 | Comedy Channel(6) </div>
+    <div class="col-md-4"> Source - 03 | News Channel(3) </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-md-4">
-      <strong>User-01</strong>
+      <strong>Tech Video List :(1,2,3,4,5)</strong>
       <hr>
-      <ul class="video-list">
-        <li *ngFor="let list of userList1">
-          <strong>Video:</strong> {{list}}
-        </li>
-      </ul>
     </div>
-    <!-- <div class="col-md-4">
-      <strong>User-02</strong>
+    <div class="col-md-4">
+      <strong>Comedy Video List :(1,2,3,4,5,6)</strong>
       <hr>
-      <ul class="video-list">
-        <li *ngFor="let list of userList2">
-          <strong>Video:</strong> {{list}}
-        </li>
-      </ul>
-    </div> -->
+    </div>
+    <div class="col-md-4">
+      <strong>News Video List :(1,2,3)</strong>
+      <hr>
+    </div>
   </div>
+  <hr>
   <div class="row justify-content-center">
     <div class="col-md-6">
+      <h2>Concat</h2>
       <div class="card">
         <div class="card-header">Your channel Subscriber</div>
         <div class="card-body">
-          <ul>
+          <ul class="video-list">
+            <li *ngFor="let list of items">
+              <strong>{{list}}</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>Merge</h2>
+      <div class="card">
+        <div class="card-header">Your channel Subscriber</div>
+        <div class="card-body">
+          <ul class="video-list">
+            <li *ngFor="let list of concatItems">
+              <strong>{{list}}</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="my-3">
+  <h2>Merge Map</h2>
+  <br />
+  <hr>
+  <div class="row">
+    <div class="col-md-4"> Source - 01 | Map </div>
+    <div class="col-md-4"> Source - 02 | Map + MergeAll </div>
+    <div class="col-md-4"> Source - 03 | MergeMap </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Video :['Tech','Comdedy','News']</strong>
+      <hr>
+    </div>
+    <div class="col-md-4">
+      <strong>Video :['Tech','Comdedy','News']</strong>
+      <hr>
+    </div>
+    <div class="col-md-4">
+      <strong>Video :['Tech','Comdedy','News']</strong>
+      <hr>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h2>map</h2>
+      <div class="card">
+        <div class="card-header">Your channel Subscriber</div>
+        <div class="card-body">
+          <ul id="container" class="video-list">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2>Merge All</h2>
+      <div class="card">
+        <div class="card-header">Your channel Subscriber</div>
+        <div class="card-body">
+          <ul id="container2" class="video-list">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2>Map Merge</h2>
+      <div class="card">
+        <div class="card-header">Your channel Subscriber</div>
+        <div class="card-body">
+          <ul id="container3" class="video-list">
           </ul>
         </div>
       </div>
